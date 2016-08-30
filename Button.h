@@ -18,6 +18,7 @@ class Button {
 
     bool scan();
     void setPressHandler(buttonEventHandler handler);
+    void setUnPressHandler(buttonEventHandler handler);
     void setClickHandler(buttonEventHandler handler);
     void setLongClickHandler(buttonEventHandler handler);
   private:
@@ -28,6 +29,7 @@ class Button {
     long pressTime;
     buttonEventHandler c_handler;
     buttonEventHandler p_handler;
+    buttonEventHandler up_handler;
     buttonEventHandler cl_handler;
 
 
