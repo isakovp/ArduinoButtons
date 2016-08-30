@@ -39,6 +39,9 @@ bool Button::scan(void) {
               c_handler(*this);
             }
           }
+          if (up_handler != NULL) {
+            up_handler(*this);
+          }
         }
       }
     }
@@ -48,6 +51,10 @@ bool Button::scan(void) {
 
 void Button::setPressHandler(buttonEventHandler h) {
   p_handler = h;
+}
+
+void Button::setUnPressHandler(buttonEventHandler h) {
+  up_handler = h;
 }
 
 void Button::setClickHandler(buttonEventHandler h) {
