@@ -7,7 +7,7 @@ Button::Button(int btnPin) {
   lastDebounceTime = 0;
 }
 
-int getPin() {
+int Button::getPin() {
   return pin;
 }
 
