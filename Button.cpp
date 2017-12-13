@@ -7,6 +7,10 @@ Button::Button(int btnPin) {
   lastDebounceTime = 0;
 }
 
+int getPin() {
+  return pin;
+}
+
 void Button::scan(void) {
   if (p_handler != NULL || c_handler != NULL) {
     int currentState = digitalRead(pin);
