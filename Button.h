@@ -16,7 +16,7 @@ class Button {
   public:
     Button(int btnPin);
 
-    bool scan();
+    void scan();
     void setPressHandler(buttonEventHandler handler);
     void setUnPressHandler(buttonEventHandler handler);
     void setClickHandler(buttonEventHandler handler);
