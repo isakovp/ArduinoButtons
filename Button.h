@@ -21,6 +21,7 @@ class Button {
     void setUnPressHandler(buttonEventHandler handler);
     void setClickHandler(buttonEventHandler handler);
     void setLongClickHandler(buttonEventHandler handler);
+    int getPin();
   private:
     int pin;
     int prevButtonState;
