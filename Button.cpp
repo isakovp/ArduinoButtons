@@ -14,10 +14,6 @@ int Button::getPin() {
 void Button::reset() {
   prevButtonState = LOW;
   lastDebounceTime = 0;
-  p_handler = NULL;
-  c_handler = NULL;
-  cl_handler = NULL;
-  up_handler = NULL:
 }  
 
 void Button::scan(void) {
