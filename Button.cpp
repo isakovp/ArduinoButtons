@@ -11,6 +11,11 @@ int Button::getPin() {
   return pin;
 }
 
+void Button::reset() {
+  prevButtonState = LOW;
+  lastDebounceTime = 0;
+}  
+
 void Button::scan(void) {
   if (p_handler != NULL || c_handler != NULL) {
     int currentState = digitalRead(pin);
