@@ -5,6 +5,7 @@ Button::Button(int btnPin) {
   pin = btnPin;
   prevButtonState = LOW;
   lastDebounceTime = 0;
+  buttonState = LOW;
 }
 
 int Button::getPin() {
@@ -14,7 +15,7 @@ int Button::getPin() {
 void Button::reset() {
   prevButtonState = LOW;
   lastDebounceTime = 0;
-}  
+}
 
 void Button::scan(void) {
   if (p_handler != NULL || c_handler != NULL) {
